@@ -17,21 +17,27 @@
   the iteration process.
 -->
 
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
+**Language/Version**: Python 3.13+
+**Primary Dependencies**: Standard Library (uv for external packages if needed)
+**Storage**: In-Memory (Python Lists/Dictionaries)
+**Testing**: pytest
+**Target Platform**: Console Application
+**Project Type**: single/web/mobile - determines source structure
+**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]
+**Constraints**: No external database or file persistence.
 **Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
 
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- **Modularity**: Is the code organized into clean, single-purpose functions?
+- **State Management**: Is the global state managed cleanly (passed as arguments or in a Service class)?
+- **Error Handling**: Does the app handle invalid input gracefully without crashing?
+- **User Experience**: Does the app run in a continuous loop until explicitly exited?
+- **Zero-Inference Rule**: Does the implementation strictly follow the spec?
+- **Task-Based Implementation**: Does every piece of code map to a specific task?
+- **Code Style**: Does the code adhere to PEP 8 and use Type Hints?
 
 ## Project Structure
 

@@ -1,55 +1,43 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# The Evolution of Todo (Phase I) Constitution
+
+<!-- 
+Sync Impact Report:
+- Version change: none -> 1.0.0
+- List of modified principles: none
+- Added sections: Core Principles, Technology Stack & Constraints, Core Features, Governance
+- Removed sections: none
+- Templates requiring updates:
+- Follow-up TODOs: none
+-->
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Architecture Principles
+- **Modularity:** Code must be organized into clean, single-purpose functions (e.g., `add_task`, `view_tasks`).
+- **State Management:** Global state (the list of tasks) should be managed cleanly, preferably passed as arguments or contained within a Service class.
+- **Error Handling:** The app must not crash on invalid input. It should catch errors (e.g., entering text instead of a Task ID) and show friendly messages.
+- **User Experience:** The application must run in a continuous loop (Interactive Menu) until the user explicitly selects "Exit".
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Development Workflow (Spec-Driven)
+- **Zero-Inference Rule:** AI Agents must strictly follow the requirements defined in `speckit.specify.md` and `speckit.plan.md`. Do not invent features not requested.
+- **Task-Based Implementation:** No code is written unless it maps to a specific Task ID in `speckit.tasks.md`.
+- **Code Style:** Follow PEP 8 standards. Use Python Type Hints (e.g., `def add_task(title: str) -> dict:`) for clarity.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+## Technology Stack & Constraints
+- **Language:** Python 3.13+
+- **Interface:** Command Line Interface (CLI) / Console App
+- **Data Storage:** In-Memory only (Python Lists/Dictionaries).
+    - *Constraint:* No external database (SQL/NoSQL) or file persistence (JSON/TXT) is allowed in this phase. Data is lost when the app exits.
+- **Package Manager:** UV (if external packages are needed, though standard library is preferred for Phase I).
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
-
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
-
-### [PRINCIPLE_6_NAME]
-
-
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Core Features (Non-Negotiable)
+1.  **Add Task:** Must capture a Title (required) and Description (optional). Auto-generate a unique ID.
+2.  **View Tasks:** Display ID, Title, and Status (Pending/Completed).
+3.  **Update Task:** Modify Title or Description by ID.
+4.  **Delete Task:** Remove task by ID.
+5.  **Mark Complete:** Toggle status to "Completed".
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution is the single source of truth for project principles and architecture. All development artifacts, including specifications, plans, and code, must adhere to it. Amendments require a documented proposal and review.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-19 | **Last Amended**: 2026-01-19
