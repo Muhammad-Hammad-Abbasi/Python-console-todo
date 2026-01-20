@@ -18,10 +18,10 @@
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create `src/`, `tests/`, `src/services/`, `src/models/`, `src/cli/` directories
-- [ ] T002 Initialize Python project (e.g., create `__init__.py` files in `src/`, `src/services/`, `src/models/`, `src/cli/`, `tests/`, `tests/unit/`, `tests/integration/`)
-- [ ] T003 [P] Configure `pytest` for testing (e.g., `pytest.ini` or basic test setup)
-- [ ] T004 [P] Create `utils.py` for common utility functions in `src/services/utils.py`
+- [x] T001 Create `src/`, `tests/`, `src/services/`, `src/models/`, `src/cli/` directories
+- [x] T002 Initialize Python project (e.g., create `__init__.py` files in `src/`, `src/services/`, `src/models/`, `src/cli/`, `tests/`, `tests/unit/`, `tests/integration/`)
+- [x] T003 [P] Configure `pytest` for testing (e.g., `pytest.ini` or basic test setup)
+- [x] T004 [P] Create `utils.py` for common utility functions in `src/services/utils.py`
 
 ---
 
@@ -31,15 +31,15 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T005 [P] Create `Task` entity class/dictionary structure in `src/models/task.py`
-- [ ] T006 [P] Implement `Task` validation logic (e.g., `validate_task_title` to ensure non-empty) in `src/models/task.py`
-- [ ] T007 [P] Create `TaskRepository` class for in-memory storage (list/dict based) in `src/services/task_repository.py`
-- [ ] T008 [P] Implement `generate_unique_id` function in `src/services/utils.py`
-- [ ] T009 [P] Write unit tests for `Task` entity validation in `tests/unit/test_task_model.py`
-- [ ] T010 [P] Write unit tests for `generate_unique_id` in `tests/unit/test_utils.py`
-- [ ] T011 [P] Write unit tests for `TaskRepository` methods (init, add, get_all) in `tests/unit/test_task_repository.py`
+- [x] T005 [P] Create `Task` entity class/dictionary structure in `src/models/task.py`
+- [x] T006 [P] Implement `Task` validation logic (e.g., `validate_task_title` to ensure non-empty) in `src/models/task.py`
+- [x] T007 [P] Create `TaskRepository` class for in-memory storage (list/dict based) in `src/services/task_repository.py`
+- [x] T008 [P] Implement `generate_unique_id` function in `src/services/utils.py`
+- [x] T009 [P] Write unit tests for `Task` entity validation in `tests/unit/test_task_model.py`
+- [x] T010 [P] Write unit tests for `generate_unique_id` in `tests/unit/test_utils.py`
+- [x] T011 [P] Write unit tests for `TaskRepository` methods (init, add, get_all) in `tests/unit/test_task_repository.py`
 
-**Checkpoint**: Foundation ready - user story implementation can now begin in parallel
+**Checkpoint**: Foundation ready - user story implementation can now begin in parallel ✅
 
 ---
 
@@ -53,18 +53,18 @@
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T012 [P] [US1] Write unit test for `add_task` function (success case) in `tests/unit/test_task_service.py`
-- [ ] T013 [P] [US1] Write unit test for `add_task` function (empty title error) in `tests/unit/test_task_service.py`
-- [ ] T014 [P] [US1] Write integration test for CLI "Add Task" flow in `tests/integration/test_cli_add_task.py`
+- [x] T012 [P] [US1] Write unit test for `add_task` function (success case) in `tests/unit/test_task_service.py`
+- [x] T013 [P] [US1] Write unit test for `add_task` function (empty title error) in `tests/unit/test_task_service.py`
+- [x] T014 [P] [US1] Write integration test for CLI "Add Task" flow in `tests/integration/test_cli_add_task.py`
 
 ### Implementation for User Story 1
 
-- [ ] T015 [US1] Create `TaskService` class with `add_task` method in `src/services/task_service.py`
-- [ ] T016 [US1] Implement CLI menu option for "Add Task" in `src/cli/menu.py`
-- [ ] T017 [US1] Implement user input handling for `add_task` (title, description) in `src/cli/input_handler.py`
-- [ ] T018 [US1] Integrate `TaskService.add_task` with CLI input and output in `src/cli/menu.py`
+- [x] T015 [US1] Create `TaskService` class with `add_task` method in `src/services/task_service.py`
+- [x] T016 [US1] Implement CLI menu option for "Add Task" in `src/cli/menu.py`
+- [x] T017 [US1] Implement user input handling for `add_task` (title, description) in `src/cli/input_handler.py`
+- [x] T018 [US1] Integrate `TaskService.add_task` with CLI input and output in `src/cli/menu.py`
 
-**Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
+**Checkpoint**: At this point, User Story 1 should be fully functional and testable independently ✅
 
 ---
 
@@ -76,18 +76,18 @@
 
 ### Tests for User Story 2 ⚠️
 
-- [ ] T019 [P] [US2] Write unit test for `get_all_tasks` function (with tasks) in `tests/unit/test_task_service.py`
-- [ ] T020 [P] [US2] Write unit test for `get_all_tasks` function (no tasks) in `tests/unit/test_task_service.py`
-- [ ] T021 [P] [US2] Write integration test for CLI "View Tasks" flow in `tests/integration/test_cli_view_tasks.py`
+- [x] T019 [P] [US2] Write unit test for `get_all_tasks` function (with tasks) in `tests/unit/test_task_service.py`
+- [x] T020 [P] [US2] Write unit test for `get_all_tasks` function (no tasks) in `tests/unit/test_task_service.py`
+- [x] T021 [P] [US2] Write integration test for CLI "View Tasks" flow in `tests/integration/test_cli_view_tasks.py`
 
 ### Implementation for User Story 2
 
-- [ ] T022 [US2] Implement `get_all_tasks` method in `src/services/task_service.py`
-- [ ] T023 [US2] Implement CLI menu option for "View Tasks" in `src/cli/menu.py`
-- [ ] T024 [US2] Implement task display formatting in `src/cli/output_formatter.py`
-- [ ] T025 [US2] Integrate `TaskService.get_all_tasks` with CLI output in `src/cli/menu.py`
+- [x] T022 [US2] Implement `get_all_tasks` method in `src/services/task_service.py`
+- [x] T023 [US2] Implement CLI menu option for "View Tasks" in `src/cli/menu.py`
+- [x] T024 [US2] Implement task display formatting in `src/cli/output_formatter.py`
+- [x] T025 [US2] Integrate `TaskService.get_all_tasks` with CLI output in `src/cli/menu.py`
 
-**Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
+**Checkpoint**: At this point, User Stories 1 AND 2 should both work independently ✅
 
 ---
 
@@ -99,19 +99,19 @@
 
 ### Tests for User Story 3 ⚠️
 
-- [ ] T026 [P] [US3] Write unit test for `update_task` (success case) in `tests/unit/test_task_service.py`
-- [ ] T027 [P] [US3] Write unit test for `update_task` (task not found) in `tests/unit/test_task_service.py`
-- [ ] T028 [P] [US3] Write unit test for `update_task` (empty title error) in `tests/unit/test_task_service.py`
-- [ ] T029 [P] [US3] Write integration test for CLI "Update Task" flow in `tests/integration/test_cli_update_task.py`
+- [x] T026 [P] [US3] Write unit test for `update_task` (success case) in `tests/unit/test_task_service.py`
+- [x] T027 [P] [US3] Write unit test for `update_task` (task not found) in `tests/unit/test_task_service.py`
+- [x] T028 [P] [US3] Write unit test for `update_task` (empty title error) in `tests/unit/test_task_service.py`
+- [x] T029 [P] [US3] Write integration test for CLI "Update Task" flow in `tests/integration/test_cli_update_task.py`
 
 ### Implementation for User Story 3
 
-- [ ] T030 [US3] Implement `update_task` method in `src/services/task_service.py`
-- [ ] T031 [US3] Implement CLI menu option for "Update Task" in `src/cli/menu.py`
-- [ ] T032 [US3] Implement user input for `update_task` (Task ID, new title/description) in `src/cli/input_handler.py`
-- [ ] T033 [US3] Integrate `TaskService.update_task` with CLI input/output in `src/cli/menu.py`
+- [x] T030 [US3] Implement `update_task` method in `src/services/task_service.py`
+- [x] T031 [US3] Implement CLI menu option for "Update Task" in `src/cli/menu.py`
+- [x] T032 [US3] Implement user input for `update_task` (Task ID, new title/description) in `src/cli/input_handler.py`
+- [x] T033 [US3] Integrate `TaskService.update_task` with CLI input/output in `src/cli/menu.py`
 
-**Checkpoint**: All user stories should now be independently functional
+**Checkpoint**: All user stories should now be independently functional ✅
 
 ---
 
@@ -123,18 +123,16 @@
 
 ### Tests for User Story 4 ⚠️
 
-- [ ] T034 [P] [US4] Write unit test for `delete_task` (success case) in `tests/unit/test_task_service.py`
-- [ ] T035 [P] [US4] Write unit test for `delete_task` (task not found) in `tests/unit/test_task_service.py`
-- [ ] T036 [P] [US4] Write integration test for CLI "Delete Task" flow in `tests/integration/test_cli_delete_task.py`
+- [x] T034 [P] [US4] Write unit test for `delete_task` (success case) in `tests/unit/test_task_service.py`
+- [x] T035 [P] [US4] Write unit test for `delete_task` (task not found) in `tests/unit/test_task_service.py`
+- [x] T036 [P] [US4] Write integration test for CLI "Delete Task" flow in `tests/integration/test_cli_delete_task.py`
 
 ### Implementation for User Story 4
 
-- [ ] T037 [US4] Implement `delete_task` method in `src/services/task_service.py`
-- [ ] T038 [US4] Implement CLI menu option for "Delete Task" in `src/cli/menu.py`
-- [ ] T039 [US4] Implement user input for `delete_task` (Task ID) in `src/cli/input_handler.py`
-- [ ] T040 [US4] Integrate `TaskService.delete_task` with CLI input/output in `src/cli/menu.py`
-
-**Checkpoint**: All user stories should now be independently functional
+- [x] T037 [US4] Implement `delete_task` method in `src/services/task_service.py`
+- [x] T038 [US4] Implement CLI menu option for "Delete Task" in `src/cli/menu.py`
+- [x] T039 [US4] Implement user input for `delete_task` (Task ID) in `src/cli/input_handler.py`
+**Checkpoint**: All user stories should now be independently functional ✅
 
 ---
 
@@ -146,19 +144,17 @@
 
 ### Tests for User Story 5 ⚠️
 
-- [ ] T041 [P] [US5] Write unit test for `mark_task_complete` (success case) in `tests/unit/test_task_service.py`
-- [ ] T042 [P] [US5] Write unit test for `mark_task_complete` (task not found) in `tests/unit/test_task_service.py`
-- [ ] T043 [P] [US5] Write unit test for `mark_task_complete` (already complete) in `tests/unit/test_task_service.py`
-- [ ] T044 [P] [US5] Write integration test for CLI "Mark Complete" flow in `tests/integration/test_cli_mark_complete.py`
+- [x] T041 [P] [US5] Write unit test for `mark_task_complete` (success case) in `tests/unit/test_task_service.py`
+- [x] T042 [P] [US5] Write unit test for `mark_task_complete` (task not found) in `tests/unit/test_task_service.py`
+- [x] T043 [P] [US5] Write unit test for `mark_task_complete` (already complete) in `tests/unit/test_task_service.py`
+- [x] T044 [P] [US5] Write integration test for CLI "Mark Complete" flow in `tests/integration/test_cli_mark_complete.py`
 
 ### Implementation for User Story 5
 
-- [ ] T045 [US5] Implement `mark_task_complete` method in `src/services/task_service.py`
-- [ ] T046 [US5] Implement CLI menu option for "Mark Complete" in `src/cli/menu.py`
-- [ ] T047 [US5] Implement user input for `mark_task_complete` (Task ID) in `src/cli/input_handler.py`
-- [ ] T048 [US5] Integrate `TaskService.mark_task_complete` with CLI input/output in `src/cli/menu.py`
-
-**Checkpoint**: All user stories should now be independently functional
+- [x] T045 [US5] Implement `mark_task_complete` method in `src/services/task_service.py`
+- [x] T046 [US5] Implement CLI menu option for "Mark Complete" in `src/cli/menu.py`
+- [x] T047 [US5] Implement user input for `mark_task_complete` (Task ID) in `src/cli/input_handler.py`
+**Checkpoint**: All user stories should now be independently functional ✅
 
 ---
 
@@ -166,11 +162,11 @@
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T049 Implement main application loop and menu display in `src/main.py`
-- [ ] T050 Implement robust error handling for user input (e.g., `ValueError` for non-numeric IDs) in `src/cli/input_handler.py`
-- [ ] T051 Implement "Exit" option in the main menu loop in `src/cli/menu.py`
-- [ ] T052 Add overall integration test for continuous menu operation and exit in `tests/integration/test_cli_main_loop.py`
-- [ ] T053 Refactor and clean up code for PEP 8 compliance and type hinting enforcement
+- [x] T049 Implement main application loop and menu display in `src/main.py`
+- [x] T050 Implement robust error handling for user input (e.g., `ValueError` for non-numeric IDs) in `src/cli/input_handler.py`
+- [x] T051 Implement "Exit" option in the main menu loop in `src/cli/menu.py`
+- [x] T052 Add overall integration test for continuous menu operation and exit in `tests/integration/test_cli_main_loop.py`
+- [x] T053 Refactor and clean up code for PEP 8 compliance and type hinting enforcement
 
 ---
 
